@@ -1,0 +1,14 @@
+[File paths]
+data ../data/run_20/dat/run1_20.ms.dat
+out ../data/run_20/out/Q_hist_run20.out
+
+[Configurations]
+nc 1001
+
+[WIlson times]
+nwt 19
+wt 0 50 100 150 200 250 300 350 400 450 500 550 600 650 700 750 800 850 900
+
+[Graph conf]
+out_graphs ../data/run_20/out/Q_hist
+bin 100

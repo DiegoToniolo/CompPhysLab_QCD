@@ -1,0 +1,16 @@
+[Number of points]
+np 4
+nc 1001
+
+[Data files]
+input ../data/run_12/dat/runQ_12.ms.dat ../data/run_16/dat/run1_16.ms.dat ../data/run_16b/dat/run1_16b.ms.dat ../data/run_20/dat/run1_20.ms.dat
+output ../data/cont_lim.out
+
+[Topologic susceptibility]
+n_t0 4
+t0_ts 0.25 0.50 0.75 1.25
+t0/a2 2.7984 4.8855 3.7960 6.2191
+L 12 16 16 20
+
+[Graph options]
+dir ../data/
