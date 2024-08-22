@@ -1,0 +1,12 @@
+*
+!/**/
+!*.c
+!*.h
+!*.py
+!*.ps
+!*.sh
+!*.in
+backup
+data
+!Makefile
+!.gitignore
