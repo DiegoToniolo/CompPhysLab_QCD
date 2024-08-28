@@ -1,3 +1,35 @@
+/**************************************************************************
+*	File read_in.c
+*
+*	Functions for reading input files.
+*
+*   The externally accessible functions are:
+*
+*	  void read_string(char *string, char *set, char *in_path)
+*	    Search in the file in_path the string in set. If found, it
+*	    reads and returns the next string.
+*
+*	  void read_n_string(char **string, int dim, char *set, char *in_path)
+*	    Search in the file in_path the string in set. If found, it
+*	    reads and returns the next 'dim' strings.
+*
+*	  void read_int(int *num, char *set, char *in_path)
+*	    Search in the file in_path the string in set. If found, it
+*	    reads and returns the integer number after the string.
+*
+*	  void read_n_int(int *num, int dim, char *set, char *in_path)
+*	    Search in the file in_path the string in set. If found, it
+*	    reads and returns the 'dim' integer numbers after the string.
+*
+*	  void read_double(double *num, char *set, char *in_path)
+*	    Search in the file in_path the string in set. If found, it
+*	    reads and returns the double number after the string.
+*
+*	  void read_n_double(double *num, int dim, char *set, char *in_path)
+*	    Search in the file in_path the string in set. If found, it
+*	    reads and returns the 'dim' double numbers after the string.
+*
+**************************************************************************/
 #define READ_IN_C
 
 #include <stdio.h>

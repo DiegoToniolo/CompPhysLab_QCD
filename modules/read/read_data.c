@@ -1,3 +1,22 @@
+/**********************************************************************************
+*	File read_data.c
+*
+*	Functions for reading data produced by the program ym1.c.
+*
+*   The externally accessible functions are:
+*
+*	  void read_head(t_head *head_file, FILE *in)
+*	    It reads the head of the data file.
+*
+*	  void read_Qcharge_conf(double *Q_charge, t_head head_file, FILE *in)
+*	    It reads and compute the topological charge of a configuration
+*	    of the fields.
+*
+*	  void read_Qcharge(double **Q_charge, int n_conf, t_head head_file, FILE *in)
+*	    It reads the topological charge for every n_conf configuration
+*       available.
+*
+*********************************************************************************/
 #define READ_DATA_C
 
 #include <stdio.h>

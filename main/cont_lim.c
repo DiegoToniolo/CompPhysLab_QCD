@@ -1,3 +1,10 @@
+/***************************************************************************
+*
+*    File cont_lim.c
+*
+*    For information about this program, see analysis.README
+*
+***************************************************************************/
 #define MAIN_PROGRAM
 
 #include <stdio.h>
@@ -61,7 +68,7 @@ void compute_x_fit(double *x, int *x_index, t_head h, double t0_a2)
 
 int main(int argc, char **argv)
 {
-	FILE *in = NULL, *out, *prova;
+	FILE *in = NULL, *out;
 	int np = 0, nc = 0, n_t0 = 0;
 	char **paths = NULL;
 	double *L = NULL;
@@ -100,7 +107,6 @@ int main(int argc, char **argv)
 		ts[i] = (double *) malloc(nc * sizeof(double));
 	}
 	out = fopen(paths[np], "w");
-	prova = fopen("prova.txt", "w");
 	for(int p = 0; p < np; ++p)
 	{
 		in = fopen(paths[p], "r");
@@ -146,7 +152,6 @@ int main(int argc, char **argv)
 
 	free(Q);
 	fclose(out);
-	fclose(prova);
 	for(int i = 0; i < np+1; ++i)
 		free(paths[i]);
 	for(int i = 0; i < n_t0 + 1; ++i)

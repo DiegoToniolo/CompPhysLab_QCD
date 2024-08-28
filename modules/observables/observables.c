@@ -1,3 +1,25 @@
+/**************************************************************************
+*	File observables.c
+*
+*	Functions for the computation of various correlators of observables.
+*
+*   The externally accessible functions are:
+*
+*	  double xl_xk(int delta_times)
+*	    Compute the correlation function of the operator x inserted two
+*	    times with a time difference delta_times, averaged over the
+*       possible position of insertion with that time difference.
+*
+*	  double x2l_x2k(int delta_times)
+*	    Compute the correlation function of the operator x^2 inserted two
+*	    times with a time difference delta_times, averaged over the
+*       possible position of insertion with that time difference.
+*
+*	  double top_suc(double Q_charge, double v)
+*	    Compute the topological susceptibility given the topological
+*	    charge Q_charge and the length of the lattice l.
+*
+**************************************************************************/
 #define OBSERVABLES_C
 
 #include <stdio.h>
@@ -26,17 +48,7 @@ double x2l_x2k(int delta_times)
 	return sum/(double)N;
 }
 
-double xl_xk_not_imp(int l, int k)
+double top_suc(double Q_charge, double l)
 {
-	return xx[l]*xx[k];
-}
-
-double x2l_x2k_not_imp(int l, int k)
-{
-	return xx[l]*xx[l]*xx[k]*xx[k];
-}
-
-double top_suc(double Q_charge, double v)
-{
-	return Q_charge * Q_charge / (double)(v*v*v*v);
+	return Q_charge * Q_charge / (double)(l*l*l*l);
 }

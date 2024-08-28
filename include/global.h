@@ -19,6 +19,7 @@
 #endif
 
 EXTERN double xx[N];
+
 typedef struct head
 {
 	int dn, t_w_max, t_max;

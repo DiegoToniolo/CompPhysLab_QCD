@@ -1,3 +1,37 @@
+/**************************************************************************
+*	File statistics.c
+*
+*	Functions for statistical analysis.
+*
+*   The externally accessible functions are:
+*
+*	  double mean(double * data, int n_data)
+*	    Compute the mean of the n_data values in data.
+*
+*	  double exp_val_x2(double *data, int n_data)
+*	    Compute the expectaion value of x^2 of the n_data values in data.
+*
+*	  double autocorr(double *data, int n_data, int t_mark, double average)
+*	    Compute the autocorrelation of the n_data values in data, given the
+*       average and the distance t_mark.
+*
+*	  double jack(double *data, int n_data, int index, double average)
+*	    Compute the index-th cluster of the jacknife estimator of the
+*       n_data values in data, given the average.
+*
+*	  double var_jack(double *data, int n_data, double average)
+*	    Compute the variance of the jacknife estimator of the n_data values
+*       in data, given the average.
+*
+*	  double weighted_mean(double *data, double *err, int n_data)
+*	    Compute the weighted mean of the n_data values in data with errors
+*       err.
+*
+*	  void fit(double *m, double *q, double *x, double *y, int n)
+*	    Compute a linear fit of the data using the least squares method.  
+*       The results are given through m and q.
+*
+**************************************************************************/
 #define STATISTICS_C
 
 #include <stdio.h>

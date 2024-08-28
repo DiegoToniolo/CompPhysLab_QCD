@@ -1,3 +1,11 @@
+/*********************************************************************
+*
+* File observables.h
+*
+* It contains all declaration of the function to do statistical
+* analysis.
+*
+*********************************************************************/
 #ifndef STATISTICS_H
 #define STATISTICS_H
 

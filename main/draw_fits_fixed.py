@@ -1,3 +1,10 @@
+#***************************************************************************
+#
+#    File draw_fits_fixed.py
+#
+#    For information about this program, see analysis.README
+#
+#***************************************************************************
 import numpy as npy
 import matplotlib.pyplot as plt
 from scipy.optimize import curve_fit

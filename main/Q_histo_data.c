@@ -1,3 +1,10 @@
+/***************************************************************************
+*
+*    File Q_histo_data.c
+*
+*    For information about this program, see analysis.README
+*
+***************************************************************************/
 #define MAIN_PROGRAM
 
 #include <stdio.h>

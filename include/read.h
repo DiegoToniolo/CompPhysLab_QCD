@@ -1,3 +1,10 @@
+/*********************************************************************
+*
+* File read.h
+*
+* It contains all declaration of the function to read data files.
+*
+*********************************************************************/
 #ifndef READ_H
 #define READ_H
 
