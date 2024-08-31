@@ -73,10 +73,11 @@ y_model = []
 for j in x_model:
     y_model += [f(j, par[0], par[1])]
 plt.xlabel("$a^2/t_0$")
-plt.ylabel("$ \chi $")
+plt.ylabel("$ t_0^2\chi $")
 plt.plot(x_model, y_model, 'r')
 plt.errorbar(x, y, err, fmt = 'none', capsize=2)
 plt.plot(x, y, "bo", label = "data")
+plt.ticklabel_format(axis="y", style="sci", scilimits=(0,0))
 plt.savefig(directory + "Chi.png")
 plt.close()
 
