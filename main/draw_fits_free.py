@@ -10,6 +10,7 @@ import matplotlib.pyplot as plt
 import matplotlib.axes as ax
 from scipy.optimize import curve_fit
 from scipy.stats import chi2
+from scipy.stats import norm
 import sys
 
 input_conf = open(sys.argv[1], "r")
@@ -99,7 +100,7 @@ for j in range(0, n_t0 - 1):
     chi2_comp = Chi2g(g, par, x, y, err)
     prob = 100 * (1-chi2.cdf(chi2_comp, len(x) - 3))
     print("Fit: Chi2 = {:.6f}; Prob = {:.2f}".format(chi2_comp, prob))
-    print("a = {:.10} +- {:.10f}; b = {:.10f} +- {:.10f}; c = {:.10f} +- {:.10f}".format(par[0], npy.sqrt(par_err[0][0]), par[1], npy.sqrt(par_err[1][1]), par[2], npy.sqrt(par_err[2][2])))
+    print("a = {:.10} +- {:.10f}; b = {:.10f} +- {:.10f}; c = {:.10f} +- {:.10f}; t,p = {:.10f}, {:.10f}".format(par[0], npy.sqrt(par_err[0][0]), par[1], npy.sqrt(par_err[1][1]), par[2], npy.sqrt(par_err[2][2]), npy.abs(par[0] - 1)/npy.sqrt(par_err[0][0]), 100*(1-(norm.cdf(npy.abs(par[0] - 1)/npy.sqrt(par_err[0][0]))-norm.cdf(-npy.abs(par[0] - 1)/npy.sqrt(par_err[0][0]))))))
     plt.xlim(0, max(x) + 0.05)
     y_model = []
     for i in x_model:
